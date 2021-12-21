@@ -1,0 +1,81 @@
+body {
+    color: #17253f;
+    padding: 1em;
+    font-size: .8275em;
+    line-height: 1.5em;
+    font-family: 'Helvetica Neue','Lucida Grande',sans-serif;
+    width: 260px;
+}
+
+.header_name {
+    font-size: 20px;
+    text-align: center;
+    background-image: linear-gradient(to left, rgb(5, 5, 5), rgb(48, 48, 48), rgb(85, 85, 85), rgb(48, 48, 48), rgb(5, 5, 5));
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.header_icon {
+    width: 100px;
+    height: auto;
+    display: block;
+    padding: 2px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* TOGGLE BUTTON STYLING */
+
+.toggle {
+    position: relative;
+}
+
+.toggle input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    cursor: pointer;
+    background-color: rgb(255, 22, 14);
+    transition: 0.4s;
+    width: 50px;
+    height: 30px;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background-color: #fff;
+    transition: 0.4s;
+    top: 2.5px;
+    left: 4px;
+}
+
+input:checked + .slider {
+    background-color: #3cc43c;
+    box-shadow: 0 0 8px #228a22;
+} 
+
+input:checked + .slider:before {
+    transform: translateX(17px);
+}
+
+.slider.round {
+    border-radius: 90px;
+}
+.slider.round::before {
+    border-radius: 90px;
+}
+
+/* END OF BUTTON STYLING */

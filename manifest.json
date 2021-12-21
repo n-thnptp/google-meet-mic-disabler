@@ -1,0 +1,41 @@
+{
+    "name": "Google Meet Mic Disabler",
+    "description": "Disables Google Meet's Mic (Toggleable)",
+    "version": "1.0",
+    "author": "Noppadol Thanapatipol",
+    "manifest_version": 2,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://meet.google.com/*", "https://meet.google.com/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        "/sounds/alert.mp3",
+        "/sounds/alert2.mp3",
+        "/sounds/alert3.mp3"
+    ],
+    "browser_action": {
+        "default_icon": {
+            "16": "./icon/icon.png",
+            "32": "./icon/icon.png",
+            "48": "./icon/icon.png",
+            "128": "./icon/icon.png"
+        },
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "./icon/icon.png",
+        "32": "./icon/icon.png",
+        "48": "./icon/icon.png",
+        "128": "./icon/icon.png"
+    },
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "storage"
+    ]
+}
